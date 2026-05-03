@@ -59,14 +59,29 @@ data/processed/
     └── warehouse.db
 ```
 
-### 4. Inspect the Run Report
+### 4. Visualize the Output
+
+Generate charts from the latest pipeline run:
+
+```bash
+python visualize_output.py --output-dir data/processed
+```
+
+This writes PNG charts under `data/processed/visualizations/`, including:
+
+- stage row counts
+- gold aggregation trend
+- null counts by column
+- amount distribution, when an `amount` column is present
+
+### 5. Inspect the Run Report
 
 ```bash
 # Pretty-print the JSON report
 python3 -c "import json; print(json.dumps(json.load(open('data/processed/reports/orders_run_report.json')), indent=2))"
 ```
 
-### 5. Query the SQLite Warehouse
+### 6. Query the SQLite Warehouse
 
 ```bash
 sqlite3 data/processed/warehouse/warehouse.db

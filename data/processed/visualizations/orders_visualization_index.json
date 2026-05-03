@@ -1,0 +1,9 @@
+{
+  "report_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/reports/orders_run_report.json",
+  "warehouse_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/warehouse/warehouse.db",
+  "charts": [
+    "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/visualizations/orders_stage_counts.png",
+    "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/visualizations/orders_gold_trend.png",
+    "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/visualizations/orders_amount_distribution.png"
+  ]
+}
