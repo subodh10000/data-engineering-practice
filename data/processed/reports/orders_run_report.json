@@ -25,8 +25,8 @@
     "rejected_rows": 1,
     "missing_columns": [],
     "null_counts": {},
-    "started_at": "2026-05-03T23:16:10.225785+00:00",
-    "finished_at": "2026-05-03T23:16:10.531189+00:00"
+    "started_at": "2026-05-03T23:21:21.959616+00:00",
+    "finished_at": "2026-05-03T23:21:22.165285+00:00"
   },
   "artifacts": {
     "bronze": {

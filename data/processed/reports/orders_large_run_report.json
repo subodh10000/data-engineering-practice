@@ -1,0 +1,58 @@
+{
+  "config": {
+    "input_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/raw/orders_large.csv",
+    "output_dir": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed",
+    "primary_key": "Order ID",
+    "date_column": "Order Date",
+    "mandatory_columns": [
+      "Order ID",
+      "Order Date"
+    ],
+    "warehouse_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/warehouse/warehouse.db",
+    "enable_parquet": true,
+    "enable_sql_load": true
+  },
+  "column_mapping": {
+    "Order ID": "order_id",
+    "Order Date": "order_date",
+    "Customer Name": "customer_name",
+    "Product": "product",
+    "Quantity": "quantity",
+    "Unit Price": "unit_price",
+    "Amount": "amount",
+    "Status": "status"
+  },
+  "stats": {
+    "source_file": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/raw/orders_large.csv",
+    "input_rows": 980,
+    "bronze_rows": 980,
+    "silver_rows": 930,
+    "gold_rows": 91,
+    "duplicate_rows_removed": 50,
+    "rejected_rows": 50,
+    "missing_columns": [],
+    "null_counts": {
+      "amount": 1,
+      "customer_name": 10,
+      "quantity": 1,
+      "status": 10
+    },
+    "started_at": "2026-05-03T23:19:45.768999+00:00",
+    "finished_at": "2026-05-03T23:19:46.219822+00:00"
+  },
+  "artifacts": {
+    "bronze": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/bronze/orders_large_bronze.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/bronze/orders_large_bronze.parquet"
+    },
+    "silver": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/silver/orders_large_silver.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/silver/orders_large_silver.parquet"
+    },
+    "gold": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/gold/orders_large_gold.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/gold/orders_large_gold.parquet"
+    },
+    "warehouse_db": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/warehouse/warehouse.db"
+  }
+}
