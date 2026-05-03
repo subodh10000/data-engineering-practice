@@ -1,0 +1,46 @@
+{
+  "config": {
+    "input_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/raw/orders.csv",
+    "output_dir": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed",
+    "primary_key": "Order ID",
+    "date_column": "Order Date",
+    "mandatory_columns": [],
+    "warehouse_path": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/warehouse/warehouse.db",
+    "enable_parquet": true,
+    "enable_sql_load": true
+  },
+  "column_mapping": {
+    "Order ID": "order_id",
+    "Order Date": "order_date",
+    "Customer Name": "customer_name",
+    "Amount": "amount"
+  },
+  "stats": {
+    "source_file": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/raw/orders.csv",
+    "input_rows": 6,
+    "bronze_rows": 6,
+    "silver_rows": 5,
+    "gold_rows": 4,
+    "duplicate_rows_removed": 1,
+    "rejected_rows": 1,
+    "missing_columns": [],
+    "null_counts": {},
+    "started_at": "2026-05-03T23:16:10.225785+00:00",
+    "finished_at": "2026-05-03T23:16:10.531189+00:00"
+  },
+  "artifacts": {
+    "bronze": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/bronze/orders_bronze.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/bronze/orders_bronze.parquet"
+    },
+    "silver": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/silver/orders_silver.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/silver/orders_silver.parquet"
+    },
+    "gold": {
+      "csv": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/gold/orders_gold.csv",
+      "parquet": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/gold/orders_gold.parquet"
+    },
+    "warehouse_db": "/Users/subodhkathayat/data-engineering-practice/data-engineering-practice/data/processed/warehouse/warehouse.db"
+  }
+}
